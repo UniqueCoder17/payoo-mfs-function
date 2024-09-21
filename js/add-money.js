@@ -16,6 +16,12 @@
             const newBalance = balance + addMoney;
 
             document.getElementById('account-balance').innerText = newBalance; 
+
+            const p = document.createElement('p');
+            p.innerText = `Added: ${addMoney} TK. New Balance: ${newBalance}`;
+            console.log(p);
+
+            document.getElementById('transaction-container').appendChild(p);
         }
         else{
             alert('Failed to add the money!')
