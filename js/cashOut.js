@@ -8,7 +8,8 @@ document.getElementById('btn-cash-out')
         // console.log('inside the click handler', cashOut, pinNumber)
         if(pinNumber === 1234){
             const balance = getTextFiledValueById('account-balance')
-            console.log(balance)
+            const newBalance = balance - cashOut;
+            document.getElementById('account-balance').innerText = newBalance;
         }
         else{
             alert('Try again!')
